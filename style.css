@@ -1,0 +1,321 @@
+/* EDE1D3, EED0A3, BF7849, 793015, 1F1E1E */
+* {
+    margin: 0;
+    padding: 0;
+    color: #EDE1D3;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    min-width: 300px;
+    min-height: 100vh;
+    padding-bottom: 393px;
+    background: #1F1E1E;
+}
+input,
+textarea,
+button,
+select,
+a,
+.topBarBtnMenu {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: 0;
+  border: none;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.wrapper {
+    margin-bottom: 20px;
+}
+
+/* HEADER topBar */
+.topBar {
+    position: relative;
+    height: 50px;
+    background-color: #1F1E1E;
+}
+.topBarEsLogo {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+.topBarEsLogo img {
+    border-radius: 50%;
+    border: 4px solid #793015;
+}
+.topBarBtnMenu {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.topBarEsLogo:hover,
+.topBarBtnMenu:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.backGround {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    background: url("img/bg.jpg") center / cover fixed;
+}
+.backGround h1 {
+    text-align: center;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: #1F1E1E;
+    text-shadow: 1px 1px 1px #EDE1D3;
+}
+
+/* JavaScript */
+.topBarNav {
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.topBarNav ul {
+    margin-top: 5px;
+    padding: 30px 0;
+    height: calc(50vh);
+    background: #793015;
+}
+.topBarNav ul li {
+    margin: 2px 0;
+    text-align: center;
+}
+.topBarNav ul li a {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    color: #EDE1D3;
+    transition: all 0.5s ease-in-out;
+}
+.topBarNav ul a:hover {
+    background: #BF7849;
+}
+.topBarNav ul .active a {
+    background: #BF7849;
+}
+.topBarNav.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Section menus */
+.hot {
+    background: url("img/hot-coffee.jpg") no-repeat center / cover;
+}
+.iced {
+    background: url("img/iced-coffee.jpg") no-repeat center / cover;
+}
+.frappe {
+    background: url("img/frappe.jpg") no-repeat center / cover;
+}
+.smoothie {
+    background: url("img/smoothie.jpg") no-repeat center / cover;
+}
+.galerie {
+    background: url("img/galerie.jpg") no-repeat center / cover;
+}
+.common {
+    display: none;
+}
+.common.active {
+    display: block;
+}
+
+.wrapper {
+    padding: 20px 10px;
+}
+
+.hot h2,
+.iced h2,
+.frappe h2,
+.smoothie h2,
+.galerie h2 {
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.hot h2::before,
+.iced h2::before,
+.frappe h2::before,
+.smoothie h2::before,
+.galerie h2::before {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background: #793015;
+}
+
+.hot ul,
+.iced ul,
+.frappe ul,
+.smoothie ul,
+.galerie-flex {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+}
+.hot ul div,
+.iced ul div,
+.frappe ul div,
+.smoothie ul div {
+    padding: 30px;
+    border-radius: 10px;
+    background: #1F1E1E;
+}
+
+.hot ul li,
+.iced ul li,
+.frappe ul li,
+.smoothie ul li {
+    position: relative;
+    font-size: 18px;
+    padding: 10px 0;
+    font-weight: 500;
+}
+.hot span,
+.iced span,
+.frappe span,
+.smoothie span {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    color: #793015;
+}
+
+/* Galeries */
+.galerie-flex img {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #0B0607;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    background: url("img/bg-footer.jpg") no-repeat center / cover;
+}
+.about {
+    position: relative;
+}
+.about ul {
+    padding-top: 10px;
+}
+.about h2,
+.about ul li {
+    color: #EDE1D3;
+}
+.about ul li img {
+    width: 20px;
+}
+.location {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+.rights {
+    display: inline-block;
+    width: 145px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    text-align: center;
+    background: #793015;
+}
+.location span {
+    position: absolute;
+}
+.copyRight {
+    padding-top: 25px;
+}
+.fbLogo {
+    position: absolute;
+    width: 44px;
+    right: 0;
+    bottom: 53px;
+    border-radius: 50%;
+}
+.footer_logo {
+    position: absolute;
+    width: 44px;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 4px solid #793015;
+}
+.devjames {
+    display: inline-block;
+    width: 145px;
+    border-radius: 2px;
+    color: #1F1E1E;
+    text-align: center;
+    background: #EDE1D3;
+}
+.top {
+    position: absolute;
+    width: 44px;
+    right: 0;
+    bottom: 100px;
+}
+
+/* MediaQuerie */
+@media screen and (min-width: 400px) {
+    .wrapper {
+        padding: 30px 20px;
+    }
+    .galerie-flex {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .wrapper {
+        padding: 40px 30px;
+    }
+    .hot ul,
+    .iced ul,
+    .frappe ul,
+    .smoothie ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .smoothie ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .galerie-flex {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .galerie-flex img {
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .wrapper {
+        width: 940px;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+}
